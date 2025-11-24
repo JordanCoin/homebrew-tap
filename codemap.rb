@@ -8,6 +8,8 @@ class Codemap < Formula
   depends_on "go" => :build
   depends_on "python@3.12"
 
+  include Language::Python::Virtualenv
+
   resource "rich" do
     url "https://files.pythonhosted.org/packages/source/r/rich/rich-13.7.1.tar.gz"
     sha256 "9be308cb1fe2f1f57d67ce99e95af38a1e2bc71ad9813b0e247cf7ffbcc3a432"
