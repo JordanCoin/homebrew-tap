@@ -1,16 +1,16 @@
 class Codemap < Formula
   desc "Generate a brain map of your codebase for LLM context"
   homepage "https://github.com/JordanCoin/codemap"
-  version "2.8.3"
+  version "2.9.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/JordanCoin/codemap/releases/download/v2.8.3/codemap-darwin-arm64.tar.gz"
-      sha256 "fcf45010e21b8bd25be12161c6211a8fdaad380e3648bf920e6b02472f2dde43"
+      url "https://github.com/JordanCoin/codemap/releases/download/v2.9.0/codemap-darwin-arm64.tar.gz"
+      sha256 "dc0f880a5ae38bfb3375587fb13f3fc5875eb5c24922023f128728b2932dc30a"
     else
-      url "https://github.com/JordanCoin/codemap/releases/download/v2.8.3/codemap-darwin-amd64.tar.gz"
-      sha256 "675362ddc4778ce8ed24b08ed5babbb7875797fc16cccfbf4a5ffaead9ee5924"
+      url "https://github.com/JordanCoin/codemap/releases/download/v2.9.0/codemap-darwin-amd64.tar.gz"
+      sha256 "68e8e5d69a05962db8580fbcbc596f2e3af76b29bbf2d1d6afe5d88a9c150999"
     end
   end
 
