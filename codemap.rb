@@ -5,15 +5,15 @@
 class Codemap < Formula
   desc "Generate a brain map of your codebase for LLM context"
   homepage "https://github.com/JordanCoin/codemap"
-  version "3.0.2"
+  version "3.0.3"
   license "MIT"
 
   depends_on "ast-grep"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/JordanCoin/codemap/releases/download/v3.0.2/codemap_3.0.2_darwin_amd64.tar.gz"
-      sha256 "2e6e3e411362dae59879fcd8070649b190840f15e6386246ed36b7ad524c36ca"
+      url "https://github.com/JordanCoin/codemap/releases/download/v3.0.3/codemap_3.0.3_darwin_amd64.tar.gz"
+      sha256 "513cc46cff64330098e8155e00f3f0522d5c7d01cc81fc3712aaa90f2b851bd4"
 
       def install
         bin.install "codemap"
@@ -21,8 +21,8 @@ class Codemap < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/JordanCoin/codemap/releases/download/v3.0.2/codemap_3.0.2_darwin_arm64.tar.gz"
-      sha256 "2a02d455c2a4fbb9028534eadf8546fdad9ff1d4e3bfb9b1a41635f16c90ce6d"
+      url "https://github.com/JordanCoin/codemap/releases/download/v3.0.3/codemap_3.0.3_darwin_arm64.tar.gz"
+      sha256 "d4d1cdc3e720d53377b549e9396d9bea939f8f13bbe06e398abe92d0c44fdbe8"
 
       def install
         bin.install "codemap"
@@ -33,16 +33,16 @@ class Codemap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JordanCoin/codemap/releases/download/v3.0.2/codemap_3.0.2_linux_amd64.tar.gz"
-      sha256 "fd1bd50a57d4b65719f7fdbc08011282072907cfe0e0f9d3a58a577de58a679c"
+      url "https://github.com/JordanCoin/codemap/releases/download/v3.0.3/codemap_3.0.3_linux_amd64.tar.gz"
+      sha256 "657b893ca526d2c27f9f362d4e7a6720cc61a1d1a69b07e5bac89d4e579f617e"
       def install
         bin.install "codemap"
         (pkgshare/"sg-rules").install Dir["sg-rules/*.yml"] if Dir.exist?("sg-rules")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JordanCoin/codemap/releases/download/v3.0.2/codemap_3.0.2_linux_arm64.tar.gz"
-      sha256 "3a998b10ad2748c4428a719e81b51f8608125d95146b7b56cd14510ccee6b92a"
+      url "https://github.com/JordanCoin/codemap/releases/download/v3.0.3/codemap_3.0.3_linux_arm64.tar.gz"
+      sha256 "62efb395ebf6f54941e9c0487e2d416257745f0734f2737b358a112527dc3f9e"
       def install
         bin.install "codemap"
         (pkgshare/"sg-rules").install Dir["sg-rules/*.yml"] if Dir.exist?("sg-rules")
