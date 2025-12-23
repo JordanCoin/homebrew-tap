@@ -5,21 +5,21 @@
 class Docmap < Formula
   desc "Instant documentation structure for LLMs and humans"
   homepage "https://github.com/JordanCoin/docmap"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/JordanCoin/docmap/releases/download/v0.0.1/docmap_0.0.1_darwin_amd64.tar.gz"
-      sha256 "d48628f475dd60cf2e5517d7dd52c8f3c3dd0eabbd6569d4d7d290c5980611df"
+      url "https://github.com/JordanCoin/docmap/releases/download/v0.0.2/docmap_0.0.2_darwin_amd64.tar.gz"
+      sha256 "62cb8d95405ee87a2c4548b22703b593576721dfe5dca989d369411ac86a45f0"
 
       def install
         bin.install "docmap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/JordanCoin/docmap/releases/download/v0.0.1/docmap_0.0.1_darwin_arm64.tar.gz"
-      sha256 "3feba7c035c25a33d0beabaf3f75a0e297fcb9e8ac9c45fc7322d85aaef15232"
+      url "https://github.com/JordanCoin/docmap/releases/download/v0.0.2/docmap_0.0.2_darwin_arm64.tar.gz"
+      sha256 "c8efdd166d34e64972d2c68250eb3a2d45865be8f44ba8a5bd2310c9cdb203f4"
 
       def install
         bin.install "docmap"
@@ -29,15 +29,15 @@ class Docmap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JordanCoin/docmap/releases/download/v0.0.1/docmap_0.0.1_linux_amd64.tar.gz"
-      sha256 "7a81c1a80b9e17c675068ef267d7246c315722b6fb0fa4a576feec3270ed81e2"
+      url "https://github.com/JordanCoin/docmap/releases/download/v0.0.2/docmap_0.0.2_linux_amd64.tar.gz"
+      sha256 "08b3017c075e0804c6373ccc57c8a3fab8702647decf74cf048eb4e51b25f37f"
       def install
         bin.install "docmap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JordanCoin/docmap/releases/download/v0.0.1/docmap_0.0.1_linux_arm64.tar.gz"
-      sha256 "866189b01b40e92a36caf93153423607eb46c8d51c4bec724f4bf857965335be"
+      url "https://github.com/JordanCoin/docmap/releases/download/v0.0.2/docmap_0.0.2_linux_arm64.tar.gz"
+      sha256 "ebdfb1dd45789b960a96086db95673bc468a55bc8b18124b8d30656ebfca1925"
       def install
         bin.install "docmap"
       end
