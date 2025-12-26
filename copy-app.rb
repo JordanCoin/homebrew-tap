@@ -6,9 +6,11 @@ class CopyApp < Formula
   license "MIT"
 
   depends_on :macos
+  depends_on xcode: ["14.0", :build]
 
   def install
-    bin.install "copy-app.sh" => "copy-app"
+    system "swift", "build", "-c", "release", "--disable-sandbox"
+    bin.install ".build/release/copy-app"
   end
 
   def caveats
