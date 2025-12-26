@@ -2,7 +2,7 @@ class CopyApp < Formula
   desc "Capture any macOS app window to clipboard with a single command"
   homepage "https://github.com/JordanCoin/copy-app"
   url "https://github.com/JordanCoin/copy-app/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "PLACEHOLDER_SHA256"
+  sha256 "f923141d39aca6cb2668692da16ab4d12a9cfb20a49563cb4e7010139b864b7f"
   license "MIT"
 
   depends_on :macos
