@@ -5,7 +5,7 @@
 class Repomap < Formula
   desc "Instant repository context for LLMs"
   homepage "https://github.com/JordanCoin/repomap"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   depends_on "codemap"
@@ -13,18 +13,18 @@ class Repomap < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/JordanCoin/repomap/releases/download/v0.1.0/repomap_0.1.0_darwin_amd64.tar.gz"
-      sha256 "8f966643e3f00498e14e65f94b3758cc4cfa3d0ef3f508f809a98ab7e71ed2e3"
+      url "https://github.com/JordanCoin/repomap/releases/download/v0.1.1/repomap_0.1.1_darwin_amd64.tar.gz"
+      sha256 "c7f4b214c75753402871dce3b76f7396c9361ef2d36c626bd4a767ca7b1ba415"
 
-      def install
+      define_method(:install) do
         bin.install "repomap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/JordanCoin/repomap/releases/download/v0.1.0/repomap_0.1.0_darwin_arm64.tar.gz"
-      sha256 "5d311e91c5ebf98a16f7f13f6d0fdd93d135e247e606a291c57b57154bbd6400"
+      url "https://github.com/JordanCoin/repomap/releases/download/v0.1.1/repomap_0.1.1_darwin_arm64.tar.gz"
+      sha256 "be979451235d3f4db4cdb302845fe18d77cd1bf46c5913432d0fdbbe1f06f5d0"
 
-      def install
+      define_method(:install) do
         bin.install "repomap"
       end
     end
@@ -32,16 +32,16 @@ class Repomap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JordanCoin/repomap/releases/download/v0.1.0/repomap_0.1.0_linux_amd64.tar.gz"
-      sha256 "67af819a538efecd9b0bed24affcc862559cd98cc9fbf09b3c4e418c2bebe152"
-      def install
+      url "https://github.com/JordanCoin/repomap/releases/download/v0.1.1/repomap_0.1.1_linux_amd64.tar.gz"
+      sha256 "308c4b062babb8f2758b2f18db02d64e364246c72a72464d7357b1a8a2520131"
+      define_method(:install) do
         bin.install "repomap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JordanCoin/repomap/releases/download/v0.1.0/repomap_0.1.0_linux_arm64.tar.gz"
-      sha256 "28de6006f49a5a2173ba49d6a1810c93894b941da55bdf2bbc8363b5685ccbe5"
-      def install
+      url "https://github.com/JordanCoin/repomap/releases/download/v0.1.1/repomap_0.1.1_linux_arm64.tar.gz"
+      sha256 "1d3ab55f03d41705df6153047f1ca7f46c2719fd48cd8a21df1230de795ac934"
+      define_method(:install) do
         bin.install "repomap"
       end
     end
