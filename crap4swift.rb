@@ -1,10 +1,10 @@
 class Crap4swift < Formula
   desc "Change Risk Anti-Patterns (CRAP) metric for Swift"
   homepage "https://github.com/JordanCoin/crap4swift"
-  url "https://github.com/JordanCoin/crap4swift/releases/download/v0.1.0/crap4swift-macos.tar.gz"
-  sha256 "4bcaf176c325f68e86717b81e2b6a7545dae2e5e3cb6907f247a1dd6774878a7"
+  url "https://github.com/JordanCoin/crap4swift/releases/download/v0.1.1/crap4swift-macos.tar.gz"
+  sha256 "ef6954120324bbb1e0b21f4e9b0da32f129be852f0ebca68391da758b09c2b42"
   license "MIT"
-  version "0.1.0"
+  version "0.1.1"
 
   depends_on :macos
 
