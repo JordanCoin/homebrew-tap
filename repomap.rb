@@ -5,7 +5,7 @@
 class Repomap < Formula
   desc "Instant repository context for LLMs"
   homepage "https://github.com/JordanCoin/repomap"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   depends_on "codemap"
@@ -13,16 +13,16 @@ class Repomap < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/JordanCoin/repomap/releases/download/v0.1.1/repomap_0.1.1_darwin_amd64.tar.gz"
-      sha256 "c7f4b214c75753402871dce3b76f7396c9361ef2d36c626bd4a767ca7b1ba415"
+      url "https://github.com/JordanCoin/repomap/releases/download/v0.1.2/repomap_0.1.2_darwin_amd64.tar.gz"
+      sha256 "1e761fd3cc70156704b798866051fc04d77d205eb3a59c95d682f8f5ebb916c2"
 
       define_method(:install) do
         bin.install "repomap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/JordanCoin/repomap/releases/download/v0.1.1/repomap_0.1.1_darwin_arm64.tar.gz"
-      sha256 "be979451235d3f4db4cdb302845fe18d77cd1bf46c5913432d0fdbbe1f06f5d0"
+      url "https://github.com/JordanCoin/repomap/releases/download/v0.1.2/repomap_0.1.2_darwin_arm64.tar.gz"
+      sha256 "b59210263ba52c4ebfbce3d8c6e2e3bc8c20e754afdd9dfd42563e6edf6c172b"
 
       define_method(:install) do
         bin.install "repomap"
@@ -32,19 +32,28 @@ class Repomap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JordanCoin/repomap/releases/download/v0.1.1/repomap_0.1.1_linux_amd64.tar.gz"
-      sha256 "308c4b062babb8f2758b2f18db02d64e364246c72a72464d7357b1a8a2520131"
+      url "https://github.com/JordanCoin/repomap/releases/download/v0.1.2/repomap_0.1.2_linux_amd64.tar.gz"
+      sha256 "6486d49fdf066996fc8ee8cde6c8bdea761f665eab510ca222ad439cfae576fc"
       define_method(:install) do
         bin.install "repomap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JordanCoin/repomap/releases/download/v0.1.1/repomap_0.1.1_linux_arm64.tar.gz"
-      sha256 "1d3ab55f03d41705df6153047f1ca7f46c2719fd48cd8a21df1230de795ac934"
+      url "https://github.com/JordanCoin/repomap/releases/download/v0.1.2/repomap_0.1.2_linux_arm64.tar.gz"
+      sha256 "3d8abbd9da0c2f89a5cf38b5d3bf29fab03943952a2166707a08b9e002e2e3d5"
       define_method(:install) do
         bin.install "repomap"
       end
     end
+  end
+
+  def caveats
+    <<~EOS
+      repomap is installed from a prebuilt GitHub Release archive (no local compile).
+      If brew fails with an Xcode CLT error, it is usually a transitive dependency
+      (e.g. ast-grep via codemap) building from source — install the release
+      binary from https://github.com/JordanCoin/repomap/releases instead, or update CLT.
+    EOS
   end
 
   test do
