@@ -5,21 +5,21 @@
 class Docmap < Formula
   desc "Instant documentation structure for LLMs and humans"
   homepage "https://github.com/JordanCoin/docmap"
-  version "0.3.1"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/JordanCoin/docmap/releases/download/v0.3.1/docmap_0.3.1_darwin_amd64.tar.gz"
-      sha256 "355c9b343b33249f7a6a0c12b285b282ad659ae2dd496fd9df9f61343ee08af9"
+      url "https://github.com/JordanCoin/docmap/releases/download/v0.5.0/docmap_0.5.0_darwin_amd64.tar.gz"
+      sha256 "0d13f0f6981aff989c7a4db4a3618c0b8e5764f367642d4cb94d65c45f26d6e9"
 
       define_method(:install) do
         bin.install "docmap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/JordanCoin/docmap/releases/download/v0.3.1/docmap_0.3.1_darwin_arm64.tar.gz"
-      sha256 "92f15a26769dd365915a7367f6766e99c4157103bbd08e8c75d6da6332a7cd32"
+      url "https://github.com/JordanCoin/docmap/releases/download/v0.5.0/docmap_0.5.0_darwin_arm64.tar.gz"
+      sha256 "dea990ec055ebe0928b283025293554db26824d7bbfb4fcaff41ef0e9e4596ef"
 
       define_method(:install) do
         bin.install "docmap"
@@ -29,19 +29,27 @@ class Docmap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JordanCoin/docmap/releases/download/v0.3.1/docmap_0.3.1_linux_amd64.tar.gz"
-      sha256 "b4230c89eb1448dabd5b5c493080775df6ec6e1584a2d443a21fcd4d4cef0828"
+      url "https://github.com/JordanCoin/docmap/releases/download/v0.5.0/docmap_0.5.0_linux_amd64.tar.gz"
+      sha256 "98e0d26af78f3ba6a73145b772ba8e85f4920c3c95aceafe984b2ac4fcd09689"
       define_method(:install) do
         bin.install "docmap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JordanCoin/docmap/releases/download/v0.3.1/docmap_0.3.1_linux_arm64.tar.gz"
-      sha256 "a9d2767221bb0ea92b0987495f761005a4d681617c5e01bda130caf2163207d7"
+      url "https://github.com/JordanCoin/docmap/releases/download/v0.5.0/docmap_0.5.0_linux_arm64.tar.gz"
+      sha256 "b72e81ad9a526857017046002d4638f90f368a20fc987007555c5a26f8879108"
       define_method(:install) do
         bin.install "docmap"
       end
     end
+  end
+
+  def caveats
+    <<~EOS
+      docmap is installed from a prebuilt GitHub Release archive (no local compile).
+      If brew fails with an Xcode CLT error, update CLT or install the release
+      binary from https://github.com/JordanCoin/docmap/releases.
+    EOS
   end
 
   test do
